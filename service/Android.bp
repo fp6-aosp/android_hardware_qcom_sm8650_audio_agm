@@ -26,7 +26,7 @@ cc_library_shared {
         "-Wno-tautological-compare",
     ] + select(soong_config_variable("qtiaudio", "feature_ar_memlogger"), {
         "true": [],
-        default: ["-DAGM_MEMLOG_SUPPORTED"],
+        default: ["-DAGM_MEMLOG_UNSUPPORTED"],
     }),
 
     srcs: [
